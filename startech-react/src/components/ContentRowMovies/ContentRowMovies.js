@@ -8,7 +8,7 @@ function ContentRowMovies() {
   const [categorias, setCategorias] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/usuarios")
+    fetch("http://localhost:3010/api/usuarios")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -20,7 +20,7 @@ function ContentRowMovies() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/productos")
+    fetch("http://localhost:3010/api/productos")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

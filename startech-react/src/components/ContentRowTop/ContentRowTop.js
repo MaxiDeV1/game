@@ -9,7 +9,7 @@ function ContentRowTop() {
     <React.Fragment>
       <div className="custom-container">
         <div className="custom-header">
-          <h1 className="custom-heading">Startech Dashboard</h1>
+          <h1 className="custom-heading">GAMEZONE Dashboard</h1>
         </div>
 
         <ContentRowMovies />

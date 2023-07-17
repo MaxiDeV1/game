@@ -1,6 +1,6 @@
 import "../nav/nav.css";
 import React from "react";
-import image from "../../assets/images/logo.ico";
+import image from "../../assets/images/image.jpg";
 import { Link } from "react-router-dom";
 
 export function PanelLeft(props) {
@@ -18,7 +18,7 @@ export function PanelLeft(props) {
 
         <li className="nav-item active">
           <Link className="nav-link" to="/">
-            <span>Startech Dashboard</span>
+            <span>GAMEZONE Dashboard</span>
           </Link>
         </li>
 

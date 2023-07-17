@@ -12,43 +12,26 @@ function GenresInDb() {
           <div className="row">
             <div className="col-lg-6 mb-4">
               <div className="card-item">
-                <div className="card-item-body">Electrodomésticos</div>
+                <div className="card-item-body">Guerra</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card-item">
-                <div className="card-item-body">Lavado</div>
+                <div className="card-item-body">Aventura</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card-item">
-                <div className="card-item-body">TV y audio</div>
+                <div className="card-item-body">Terror</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card-item">
-                <div className="card-item-body">Congeladores</div>
+                <div className="card-item-body">hardcore</div>
               </div>
             </div>
             <div className="col-lg-6 mb-4">
-              <div className="card-item">
-                <div className="card-item-body">Celular</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card-item">
-                <div className="card-item-body">Nootebook</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card-item">
-                <div className="card-item-body">Componente</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card-item">
-                <div className="card-item-body">Tablet</div>
-              </div>
+          
             </div>
           </div>
         </div>
