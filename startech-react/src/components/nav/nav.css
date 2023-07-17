@@ -48,6 +48,9 @@
     margin-bottom: 10px;
     font-weight: bold;
   }
-  
+  img {
+    border-radius: 6px;
+    height: 100px;
+  }
   /* Additional styles can be added here as needed */
   

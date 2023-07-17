@@ -21,10 +21,10 @@ export function ViewUser() {
     <div className="user">
       <div className="details" key={usuarios?.id}>
         <h2>Detalles del usuarios</h2>
-        <p>Nombre: {usuarios?.name}</p>
+        <p>Nombre: {usuarios?.username}</p>
         <p>Email: {usuarios?.email}</p>
         <p>Imagen de Perfil:</p>
-        <img src={`http://localhost:3001/images/usuarios/${usuarios?.perfil}`} alt="Usuario" width={300} />
+        <img src={`http://localhost:3010/images/usuarios/${usuarios?.perfil}`} alt="Usuario" width={300} />
       </div>
     </div>
     
