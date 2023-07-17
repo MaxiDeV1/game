@@ -8,7 +8,7 @@ export function ViewUser() {
   const [usuarios, setUsuario] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/api/usuarios/${userId}`)
+    fetch(`http://localhost:3010/api/usuarios/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         setUsuario(data.user);

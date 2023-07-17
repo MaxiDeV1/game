@@ -8,7 +8,7 @@ export function UserPanel(props) {
   const [usuario, SetUsuarios] = useState([]);
   useEffect(() => {
 
-    fetch("http://localhost:3001/api/usuarios")
+    fetch("http://localhost:3010/api/usuarios")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
