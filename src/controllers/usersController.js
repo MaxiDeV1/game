@@ -24,14 +24,15 @@ const userController = {
       });
       console.log(errorsValidator.mapped());
     } else {
+      const imgFileName = req.file ? req.file.filename : '1689545541659_img_.png';
       db.Usuario.create({
         username: req.body.userName,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        img: req.file ? req.file.filename : "1689545541659_img_.jpg",
+        img: imgFileName
       })
         .then((user) => {
-          res.redirect("/");
+          res.redirect("/login");
         })
         .catch((error) => {
           console.log(error);

@@ -44,6 +44,7 @@ const mainController = {
         id: id,
         nombre: req.body.productName,
         precio: req.body.price,
+        description: req.body.description,
         img: req.file.filename,
       });
       res.redirect("/");
@@ -62,7 +63,7 @@ const mainController = {
     productEdited.description = req.body.description;
     await productEdited.save();
 
-    res.redirect("/product-detail/" + id);
+    res.redirect("/productos-detail/" + id);
   },
   destroy: async (req, res) => {
     try {
@@ -73,6 +74,9 @@ const mainController = {
       console.log(error);
     }
   },
+  search: async function (req,res) {
+    
+  }
 };
 
 module.exports = mainController;
