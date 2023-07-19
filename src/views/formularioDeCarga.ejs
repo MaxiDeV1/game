@@ -9,7 +9,7 @@
     
     <div class="formulario-carga">
         <h1>Formulario de carga</h1>
-        <form action="/product-detail" method="POST" enctype="multipart/form-data">
+        <form action="/productos-detail" method="POST" enctype="multipart/form-data">
             <label for="name">
                 Nombre del producto
                 <input type="text" id="name" name="productName" 
@@ -55,13 +55,12 @@
                 value="<%= locals.oldData ? oldData.discount : null %>">
             </label>
             <label for="">
-                Categoria
-                <select name="category" id="">
-                    <option value="guitarra">Guitarra</option>
-                    <option value="Bajos">Bajos</option>
-                    <option value="percusion">Percusión</option>
-                    <option value="cuerdas-frotadas">Cuerdas Frotadas</option>
-                    <option value="microfonos">Microfonos</option>
+                clase
+                <select name="clase_id" id="">
+                    <option value="1">guerra</option>
+                    <option value="2">aventura</option>
+                    <option value="3">terror</option>
+                    <option value="4">hardcore</option>
                 </select>
                 <% if (locals.errors && errors.category){ %>
                     <div class="text-danger">
