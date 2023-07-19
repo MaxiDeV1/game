@@ -39,14 +39,14 @@ module.exports = {
 
   search: async (req, res) => {
     const producto = await db.Producto.findByPk(req.body.id, {
-      attributes: ["id", "nombre", "descuento", "precio", "clase_id"],
+      attributes: ["id", "nombre", "descuento", "precio", "category"],
     });
 
     const listCategory = await db.Clase.findAll();
 
     let categoryProduct = [];
     let categoryType = listCategory.filter(
-      (name) => name.id == producto.clase_id
+      (name) => name.id == producto.category
     );
 
     categoryProduct.push(categoryType[0].nombre);
@@ -55,8 +55,8 @@ module.exports = {
       product: producto,
       category: categoryProduct,
       imageProduct: `/api/productImagen/${producto.id}`,
-      descuento: 1,
-      precio: 1,
+      descuento: producto.descuento,
+      precio: producto.precio,
     });
   },
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 16-07-2023 a las 02:54:22
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.2.0
+-- Host: 127.0.0.1
+-- Generation Time: Jul 19, 2023 at 05:35 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,28 +18,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `gamezone`
+-- Database: `gamezone`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos`
+-- Table structure for table `productos`
 --
 
 CREATE TABLE `productos` (
   `id` int(100) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `price` varchar(20) NOT NULL,
+  `nombre` varchar(20) NOT NULL,
+  `precio` varchar(20) NOT NULL,
   `description` varchar(300) NOT NULL,
   `img` text NOT NULL,
-  `category_id` int(11) NOT NULL
+  `category` varchar(11) NOT NULL,
+  `descuento` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -51,36 +52,47 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tablas volcadas
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `username`, `email`, `password`, `img`) VALUES
+(1, 'maximo', 'maximovelasquez@gmail.com', '$2a$10$oOhy9aJukaRwK', '1689733593971_img_.png'),
+(2, 'user1', 'user1@gmail.com', '$2a$10$ElFXr.XXygs2D', '1689545541659_img_.png'),
+(3, 'user22', 'user22@gmail.com', '$2a$10$5NVMtxH50/4Ox', '1689545541659_img_.png'),
+(4, 'maxi', 'maxi@gmail.com', '$2a$10$w8KMFxR1uzJ0z', '1689545541659_img_.png'),
+(5, 'maxi1', 'maxi1@gmail.com', '$2a$10$w7InHGnfZMXEE', '1689545541659_img_.png');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `productos`
+-- Indexes for table `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `productos`
+-- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
